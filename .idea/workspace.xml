@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac0a9367-c174-41ec-814b-198711dc72b8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZUFyiuvGDSTpIAoCU4XoHKdnrw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Royce\Desktop\TanksDemo\src\main\resources" />
+      <recent name="C:\Users\Royce\Desktop\TanksDemo\src\main\kotlin\top\royce2003\game\enums" />
+      <recent name="C:\Users\Royce\Desktop\TanksDemo\src\main\kotlin\top\royce2003\game\model" />
+      <recent name="C:\Users\Royce\Desktop\TanksDemo\src\main\kotlin\top\royce2003\game" />
+      <recent name="C:\Users\Royce\Desktop\TanksDemo\src\main\kotlin" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AppKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="TanksDemo.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="top.royce2003.game.AppKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.AppKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac0a9367-c174-41ec-814b-198711dc72b8" name="Default Changelist" comment="" />
+      <created>1584886021655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584886021655</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="76" key="#Inspections" timestamp="1584945862354">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1584945862354" />
+    <state x="301" y="179" key="#Project_Structure" timestamp="1584886124939">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="301" y="179" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1584886124939" />
+    <state x="609" y="206" key="#com.intellij.ide.util.MemberChooser" timestamp="1584953794778">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="609" y="206" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1584953794778" />
+    <state x="956" y="126" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1584949703011">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="956" y="126" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1584949703011" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1584956672575">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584956672575" />
+    <state width="922" height="157" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1584891789836" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1584956672575">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1584956672575" />
+    <state width="922" height="157" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1584891789835" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1584956672575">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1584956672575" />
+    <state width="922" height="157" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1584891789835" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1584956672575">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1584956672575" />
+    <state width="922" height="157" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1584891789836" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1584956672576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1584956672576" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1584956672576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1584956672576" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1584956672576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1584956672576" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1584956672576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1584956672576" />
+    <state x="449" y="247" key="com.intellij.ide.util.TipDialog" timestamp="1584929567850">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="449" y="247" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584929567850" />
+    <state x="449" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1584891820740" />
+    <state x="488" y="59" key="refactoring.ChangeSignatureDialog" timestamp="1584930018648">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="488" y="59" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1584930018648" />
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup" timestamp="1584954367539">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="430" y="154" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1584954367539" />
+  </component>
+</project>
