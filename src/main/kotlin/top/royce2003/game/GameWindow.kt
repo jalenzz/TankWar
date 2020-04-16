@@ -8,8 +8,10 @@ import top.royce2003.game.business.AutoMoveable
 import top.royce2003.game.enums.Direction
 import top.royce2003.game.model.*
 import top.royce2003.game.business.Blockable
+import top.royce2003.game.business.Destroyable
 import top.royce2003.game.business.Moveable
 import java.io.File
+import java.util.concurrent.CopyOnWriteArrayList
 
 class GameWindow: Window (
     title = "Tank 1.0",
@@ -19,7 +21,10 @@ class GameWindow: Window (
 ) {
 
     //管理全部元素
-    private val views = arrayListOf<View>()
+//    private val views = arrayListOf<View>()
+
+    // 线程安全集合
+    private val views = CopyOnWriteArrayList<View>()
 
     private lateinit var tank:Tank
 
@@ -55,9 +60,12 @@ class GameWindow: Window (
 
     override fun onDisplay() {
 
+        // 绘制
         views.forEach {
             it.draw()
         }
+
+        println(views.size)
 
     }
 
@@ -65,11 +73,16 @@ class GameWindow: Window (
     override fun onKeyPressed(event: KeyEvent) {
 
         when(event.code) {
+
+            // 移动
             KeyCode.W -> tank.move(Direction.UP)
             KeyCode.S -> tank.move(Direction.DOWN)
             KeyCode.A -> tank.move(Direction.LEFT)
             KeyCode.D -> tank.move(Direction.RIGHT)
+
+            // 发射子弹
             KeyCode.SPACE -> views.add(tank.shot())
+
         }
 
     }
@@ -101,8 +114,19 @@ class GameWindow: Window (
 
         }
 
+        // 自动移动
         views.filter { it is AutoMoveable }.forEach {
             (it as AutoMoveable).autoMove()
+        }
+
+        // 销毁
+        views.filter { it is Destroyable }.forEach {
+
+            // 是否出界
+            if ((it as Destroyable).isDestroyed()) {
+                views.remove(it)
+            }
+
         }
 
     }

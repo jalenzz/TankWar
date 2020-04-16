@@ -1,12 +1,14 @@
 package top.royce2003.game.model
 
 import org.itheima.kotlin.game.core.Painter
+import top.royce2003.game.Config
 import top.royce2003.game.business.AutoMoveable
+import top.royce2003.game.business.Destroyable
 import top.royce2003.game.enums.Direction
 
 class Bullet(override val currentDirecton: Direction,
              create:(width:Int, height:Int) -> Pair<Int, Int>
-) : AutoMoveable {
+) : AutoMoveable, Destroyable {
 
     override val speed: Int = 8
 
@@ -49,4 +51,14 @@ class Bullet(override val currentDirecton: Direction,
         }
     }
 
+    // 脱离屏幕后销毁子弹
+    override fun isDestroyed(): Boolean {
+
+        if (x < -width ) return true
+        if (y < -height ) return true
+        if (x > Config.gameWith) return true
+        if (y > Config.gameHeight ) return true
+
+        return false
+    }
 }
