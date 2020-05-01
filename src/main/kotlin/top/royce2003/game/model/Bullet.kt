@@ -2,13 +2,16 @@ package top.royce2003.game.model
 
 import org.itheima.kotlin.game.core.Painter
 import top.royce2003.game.Config
+import top.royce2003.game.business.Attackable
 import top.royce2003.game.business.AutoMoveable
 import top.royce2003.game.business.Destroyable
+import top.royce2003.game.business.Sufferable
 import top.royce2003.game.enums.Direction
+import top.royce2003.game.ext.checkCollision
 
 class Bullet(override val currentDirecton: Direction,
              create:(width:Int, height:Int) -> Pair<Int, Int>
-) : AutoMoveable, Destroyable {
+) : AutoMoveable, Destroyable, Attackable {
 
     override val speed: Int = 8
 
@@ -16,6 +19,8 @@ class Bullet(override val currentDirecton: Direction,
     override var y: Int = 0
     override val width: Int
     override val height: Int
+
+    private var isDestroyed = false
 
     private val imagePath:String = when(currentDirecton) {
         Direction.UP -> "/img/shot_top.gif"
@@ -54,6 +59,9 @@ class Bullet(override val currentDirecton: Direction,
     // 脱离屏幕后销毁子弹
     override fun isDestroyed(): Boolean {
 
+        // 打到墙，被销毁
+        if (isDestroyed) return true
+
         if (x < -width ) return true
         if (y < -height ) return true
         if (x > Config.gameWith) return true
@@ -61,4 +69,21 @@ class Bullet(override val currentDirecton: Direction,
 
         return false
     }
+
+    override val attackPower: Int = 1
+
+    override fun isCollision(sufferable: Sufferable): Boolean {
+
+        return checkCollision(sufferable)
+
+    }
+
+    override fun notifyAttack(sufferable: Sufferable) {
+
+        println("子弹收到碰撞")
+
+        isDestroyed = true
+
+    }
+
 }

@@ -75,16 +75,8 @@ class Tank(override var x: Int, override var y: Int):Moveable {
         }
 
 
-        //检查碰撞
-        val collision = when {
-            block.y + block.height <= y ->
-                false                   //阻挡在坦克上方
-            y + height <= block.y ->
-                false                   //阻挡在坦克下方
-            block.x + block.width <= x ->
-                false                   //阻挡在坦克左方
-            else -> x+width > block.x   //阻挡在坦克右方?
-        }
+        val collision:Boolean = checkCollision(block.x, block.y, block.width, block.height,
+                                                     x,       y,       width,       height)
 
         return if (collision) currentDirection else null
 

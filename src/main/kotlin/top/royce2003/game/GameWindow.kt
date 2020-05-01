@@ -1,15 +1,11 @@
 package top.royce2003.game
 
 import javafx.scene.input.KeyCode
-
 import javafx.scene.input.KeyEvent
 import org.itheima.kotlin.game.core.Window
-import top.royce2003.game.business.AutoMoveable
+import top.royce2003.game.business.*
 import top.royce2003.game.enums.Direction
 import top.royce2003.game.model.*
-import top.royce2003.game.business.Blockable
-import top.royce2003.game.business.Destroyable
-import top.royce2003.game.business.Moveable
 import java.io.File
 import java.util.concurrent.CopyOnWriteArrayList
 
@@ -127,6 +123,34 @@ class GameWindow: Window (
                 views.remove(it)
             }
 
+        }
+
+        // 检测 攻击与遭受攻击
+        views.filter { it is Attackable }.forEach { attack ->
+
+            attack as Attackable
+
+            views.filter { it is Sufferable }.forEach sufferTag@ { suffer ->
+
+                suffer as Sufferable
+
+                // 判断是否碰撞
+                if (attack.isCollision(suffer)) {
+
+                    // 通知攻击者
+                    attack.notifyAttack(suffer)
+
+                    // 通知被攻击者
+                    val sufferView = suffer.notifySuffer(attack)
+
+                    sufferView?.let {
+                        views.addAll(sufferView)
+                    }
+
+                    return@sufferTag
+                }
+
+            }
         }
 
     }
