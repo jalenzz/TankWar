@@ -42,6 +42,7 @@ class GameWindow: Window (
                     'T' -> views.add(Steel(columNum * Config.block, lineNum * Config.block))
                     'C' -> views.add(Gress(columNum * Config.block, lineNum * Config.block))
                     'S' -> views.add(Water(columNum * Config.block, lineNum * Config.block))
+                    'D' -> views.add(Enemy(columNum * Config.block, lineNum * Config.block))
                 }
                 columNum++
             }
@@ -94,7 +95,7 @@ class GameWindow: Window (
             var badDirection: Direction? = null
             var badBlock:Blockable? = null
 
-            views.filter { it is Blockable }.forEach blockTag@{ block ->
+            views.filter { (it is Blockable) and (move != it) }.forEach blockTag@{ block ->
                 block as Blockable
 
                 val direction:Direction? = move.willCollision(block)

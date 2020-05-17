@@ -10,7 +10,7 @@ import top.royce2003.game.business.Moveable
 /**
  * 我方Tank
  */
-class Tank(override var x: Int, override var y: Int):Moveable {
+class Tank(override var x: Int, override var y: Int):Moveable, Blockable {
 
     override val width: Int = Config.block
     override val height: Int = Config.block
@@ -58,27 +58,6 @@ class Tank(override var x: Int, override var y: Int):Moveable {
         if (x > Config.gameWith - width) x = Config.gameWith - width
         if (y > Config.gameHeight - height) y = Config.gameHeight - height
 
-
-    }
-
-
-    override fun willCollision(block: Blockable): Direction? {
-
-        var x:Int = this.x
-        var y:Int = this.y
-
-        when(currentDirection) {
-            Direction.UP    -> y -= speed
-            Direction.DOWN  -> y += speed
-            Direction.LEFT  -> x -= speed
-            Direction.RIGHT -> x += speed
-        }
-
-
-        val collision:Boolean = checkCollision(block.x, block.y, block.width, block.height,
-                                                     x,       y,       width,       height)
-
-        return if (collision) currentDirection else null
 
     }
 

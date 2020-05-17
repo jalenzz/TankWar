@@ -9,7 +9,7 @@ import top.royce2003.game.business.Sufferable
 import top.royce2003.game.enums.Direction
 import top.royce2003.game.ext.checkCollision
 
-class Bullet(override val currentDirecton: Direction,
+class Bullet(override val currentDirection: Direction,
              create:(width:Int, height:Int) -> Pair<Int, Int>
 ) : AutoMoveable, Destroyable, Attackable {
 
@@ -22,7 +22,7 @@ class Bullet(override val currentDirecton: Direction,
 
     private var isDestroyed = false
 
-    private val imagePath:String = when(currentDirecton) {
+    private val imagePath:String = when(currentDirection) {
         Direction.UP -> "/img/shot_top.gif"
         Direction.DOWN -> "/img/shot_bottom.gif"
         Direction.LEFT -> "/img/shot_left.gif"
@@ -48,7 +48,7 @@ class Bullet(override val currentDirecton: Direction,
 
 
     override fun autoMove() {
-        when(currentDirecton) {
+        when(currentDirection) {
             Direction.UP -> y -= speed
             Direction.DOWN -> y += speed
             Direction.LEFT -> x -= speed
